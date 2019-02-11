@@ -15,6 +15,11 @@
 		DF2621F52211B301003E570F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF2621F42211B301003E570F /* Assets.xcassets */; };
 		DF2621F82211B301003E570F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF2621F62211B301003E570F /* LaunchScreen.storyboard */; };
 		DF2622032211B301003E570F /* TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2622022211B301003E570F /* TestTests.swift */; };
+		DF2622152211B544003E570F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2622142211B544003E570F /* MainViewController.swift */; };
+		DF2622172211B72C003E570F /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2622162211B72C003E570F /* NetworkRequest.swift */; };
+		DF2622192211BA9F003E570F /* ParkingLotResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2622182211BA9F003E570F /* ParkingLotResponse.swift */; };
+		DF26221C2211C743003E570F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF26221B2211C743003E570F /* CoreDataManager.swift */; };
+		DF26221E2211C9F3003E570F /* ParkingLotManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF26221D2211C9F3003E570F /* ParkingLotManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		DF2621FE2211B301003E570F /* TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF2622022211B301003E570F /* TestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTests.swift; sourceTree = "<group>"; };
 		DF2622042211B301003E570F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF2622142211B544003E570F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DF2622162211B72C003E570F /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		DF2622182211BA9F003E570F /* ParkingLotResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingLotResponse.swift; sourceTree = "<group>"; };
+		DF26221B2211C743003E570F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		DF26221D2211C9F3003E570F /* ParkingLotManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingLotManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +119,7 @@
 		DF2621E92211B300003E570F /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				DF26221A2211C3AB003E570F /* CoreData */,
 				DF2622132211B33E003E570F /* Storyboard */,
 				DF2622122211B32A003E570F /* Unity */,
 				DF2622112211B324003E570F /* Extension */,
@@ -137,6 +148,7 @@
 		DF26220D2211B310003E570F /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				DF2622142211B544003E570F /* MainViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -151,6 +163,8 @@
 		DF26220F2211B31A003E570F /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				DF2622162211B72C003E570F /* NetworkRequest.swift */,
+				DF2622182211BA9F003E570F /* ParkingLotResponse.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -182,6 +196,15 @@
 				DF2621EE2211B300003E570F /* Main.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		DF26221A2211C3AB003E570F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				DF26221B2211C743003E570F /* CoreDataManager.swift */,
+				DF26221D2211C9F3003E570F /* ParkingLotManager.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,7 +357,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF26221C2211C743003E570F /* CoreDataManager.swift in Sources */,
+				DF2622152211B544003E570F /* MainViewController.swift in Sources */,
 				DF2621EB2211B300003E570F /* AppDelegate.swift in Sources */,
+				DF2622192211BA9F003E570F /* ParkingLotResponse.swift in Sources */,
+				DF2622172211B72C003E570F /* NetworkRequest.swift in Sources */,
+				DF26221E2211C9F3003E570F /* ParkingLotManager.swift in Sources */,
 				DF2621F32211B300003E570F /* Test.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
