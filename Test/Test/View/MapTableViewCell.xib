@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="210" id="KGk-i7-Jjw" customClass="MapTableViewCell" customModule="Test" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="210"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="209.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Bme-QK-BEM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="209.5"/>
+                    </mapView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K13-ld-fiQ">
+                        <rect key="frame" x="259" y="15" width="46" height="30"/>
+                        <state key="normal" title="Button"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="K13-ld-fiQ" secondAttribute="trailing" constant="15" id="0rX-sg-0eQ"/>
+                    <constraint firstItem="Bme-QK-BEM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="CQc-1F-sKt"/>
+                    <constraint firstItem="Bme-QK-BEM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Hnz-7l-5i5"/>
+                    <constraint firstAttribute="bottom" secondItem="Bme-QK-BEM" secondAttribute="bottom" id="hRD-DQ-fZ2"/>
+                    <constraint firstItem="K13-ld-fiQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="hTy-tl-N0Y"/>
+                    <constraint firstAttribute="trailing" secondItem="Bme-QK-BEM" secondAttribute="trailing" id="j9P-UB-0C4"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="mapView" destination="Bme-QK-BEM" id="kMJ-w2-XSy"/>
+                <outlet property="routeButton" destination="K13-ld-fiQ" id="ykc-Bt-2xj"/>
+            </connections>
+            <point key="canvasLocation" x="-14" y="102"/>
+        </tableViewCell>
+    </objects>
+</document>
