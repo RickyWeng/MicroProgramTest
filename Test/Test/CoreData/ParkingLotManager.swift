@@ -19,7 +19,8 @@ struct ParkingLotManager {
     // 避免同樣id的資料重複新增
     let ids = getAll().map({ return $0.id })
     for record in records where !ids.contains(record.id) {
-      guard let parkingLot: ParkingLot = CoreDataManager.shared.new() else { return CoreDataResult.failure(.newManagedObjectFailed) }
+      guard let parkingLot: ParkingLot = CoreDataManager.shared.new()
+        else { return CoreDataResult.failure(.newManagedObjectFailed) }
       parkingLot.id = record.id
       parkingLot.area = record.area
       parkingLot.name = record.name

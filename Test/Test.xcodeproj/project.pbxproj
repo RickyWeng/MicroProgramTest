@@ -20,6 +20,15 @@
 		DF2622192211BA9F003E570F /* ParkingLotResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2622182211BA9F003E570F /* ParkingLotResponse.swift */; };
 		DF26221C2211C743003E570F /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF26221B2211C743003E570F /* CoreDataManager.swift */; };
 		DF26221E2211C9F3003E570F /* ParkingLotManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF26221D2211C9F3003E570F /* ParkingLotManager.swift */; };
+		DF26222122125EB4003E570F /* ConvertCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF26222022125EB4003E570F /* ConvertCoordinate.swift */; };
+		DF26222322126095003E570F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF26222222126095003E570F /* DetailViewController.swift */; };
+		DF26222822126A42003E570F /* ParkingLotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF26222622126A42003E570F /* ParkingLotTableViewCell.swift */; };
+		DF26222922126A42003E570F /* ParkingLotTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF26222722126A42003E570F /* ParkingLotTableViewCell.xib */; };
+		DF26223022129861003E570F /* MapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF26222E22129861003E570F /* MapTableViewCell.swift */; };
+		DF26223122129861003E570F /* MapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF26222F22129861003E570F /* MapTableViewCell.xib */; };
+		DF2622342212AA97003E570F /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2622322212AA97003E570F /* BaseTableViewCell.swift */; };
+		DF2622352212AA97003E570F /* BaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF2622332212AA97003E570F /* BaseTableViewCell.xib */; };
+		DF2622372212ABF6003E570F /* TableCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2622362212ABF6003E570F /* TableCellConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +63,15 @@
 		DF2622182211BA9F003E570F /* ParkingLotResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingLotResponse.swift; sourceTree = "<group>"; };
 		DF26221B2211C743003E570F /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		DF26221D2211C9F3003E570F /* ParkingLotManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingLotManager.swift; sourceTree = "<group>"; };
+		DF26222022125EB4003E570F /* ConvertCoordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvertCoordinate.swift; sourceTree = "<group>"; };
+		DF26222222126095003E570F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		DF26222622126A42003E570F /* ParkingLotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingLotTableViewCell.swift; sourceTree = "<group>"; };
+		DF26222722126A42003E570F /* ParkingLotTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParkingLotTableViewCell.xib; sourceTree = "<group>"; };
+		DF26222E22129861003E570F /* MapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTableViewCell.swift; sourceTree = "<group>"; };
+		DF26222F22129861003E570F /* MapTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapTableViewCell.xib; sourceTree = "<group>"; };
+		DF2622322212AA97003E570F /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		DF2622332212AA97003E570F /* BaseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseTableViewCell.xib; sourceTree = "<group>"; };
+		DF2622362212ABF6003E570F /* TableCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				DF2622142211B544003E570F /* MainViewController.swift */,
+				DF26222222126095003E570F /* DetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -156,6 +175,13 @@
 		DF26220E2211B316003E570F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DF26222622126A42003E570F /* ParkingLotTableViewCell.swift */,
+				DF26222722126A42003E570F /* ParkingLotTableViewCell.xib */,
+				DF26222E22129861003E570F /* MapTableViewCell.swift */,
+				DF26222F22129861003E570F /* MapTableViewCell.xib */,
+				DF2622322212AA97003E570F /* BaseTableViewCell.swift */,
+				DF2622332212AA97003E570F /* BaseTableViewCell.xib */,
+				DF2622362212ABF6003E570F /* TableCellConfigurator.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -172,6 +198,7 @@
 		DF2622102211B320003E570F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DF26222022125EB4003E570F /* ConvertCoordinate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -215,6 +242,7 @@
 			buildConfigurationList = DF2622072211B301003E570F /* Build configuration list for PBXNativeTarget "Test" */;
 			buildPhases = (
 				ADAF7EDD126A6E46E5D411B0 /* [CP] Check Pods Manifest.lock */,
+				DF26222522126728003E570F /* SwiftLint */,
 				DF2621E32211B300003E570F /* Sources */,
 				DF2621E42211B300003E570F /* Frameworks */,
 				DF2621E52211B300003E570F /* Resources */,
@@ -290,8 +318,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF2622352212AA97003E570F /* BaseTableViewCell.xib in Resources */,
 				DF2621F82211B301003E570F /* LaunchScreen.storyboard in Resources */,
 				DF2621F52211B301003E570F /* Assets.xcassets in Resources */,
+				DF26222922126A42003E570F /* ParkingLotTableViewCell.xib in Resources */,
+				DF26223122129861003E570F /* MapTableViewCell.xib in Resources */,
 				DF2621F02211B300003E570F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +359,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DF26222522126728003E570F /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n${PODS_ROOT}/SwiftLint/swiftlint\n";
+		};
 		E511BB18AD067E52631DDDEA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -357,12 +406,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF26222322126095003E570F /* DetailViewController.swift in Sources */,
 				DF26221C2211C743003E570F /* CoreDataManager.swift in Sources */,
+				DF2622372212ABF6003E570F /* TableCellConfigurator.swift in Sources */,
+				DF26223022129861003E570F /* MapTableViewCell.swift in Sources */,
 				DF2622152211B544003E570F /* MainViewController.swift in Sources */,
 				DF2621EB2211B300003E570F /* AppDelegate.swift in Sources */,
+				DF26222122125EB4003E570F /* ConvertCoordinate.swift in Sources */,
 				DF2622192211BA9F003E570F /* ParkingLotResponse.swift in Sources */,
+				DF26222822126A42003E570F /* ParkingLotTableViewCell.swift in Sources */,
 				DF2622172211B72C003E570F /* NetworkRequest.swift in Sources */,
 				DF26221E2211C9F3003E570F /* ParkingLotManager.swift in Sources */,
+				DF2622342212AA97003E570F /* BaseTableViewCell.swift in Sources */,
 				DF2621F32211B300003E570F /* Test.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
