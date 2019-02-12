@@ -22,8 +22,10 @@ class DetailViewController: UIViewController {
         let tw97X = parkingLot.tw97X,
         let tw97Y = parkingLot.tw97Y else { return }
       guard let coordinateX = Double(tw97X), let coordinateY = Double(tw97Y) else { return }
+      // 轉換 TWD97 -> CGS84
       let coordinate2D = ConvertCoordinate.TWD097_to_GWS84(point:
         CGPoint(x: coordinateX, y: coordinateY))
+      // 設置cell model
       cellModels = [
         BaseCellConfigurator(item: BaseCellData(title: "停車場名稱", value: name)),
         BaseCellConfigurator(item: BaseCellData(title: "區域", value: area)),
@@ -36,6 +38,7 @@ class DetailViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    title = "停車場資訊"
     setupTableView()
   }
 
@@ -54,6 +57,7 @@ class DetailViewController: UIViewController {
 
 extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    // 設置 MapCell 高度為500, 其他自行運算
     if cellModels[indexPath.row] is MapCellConfigurator {
       return 500
     } else {

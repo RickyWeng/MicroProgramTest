@@ -39,7 +39,7 @@ class MainViewController: UIViewController {
     NetworkRequest.getParkingLot { (result) in
       switch result {
       case .success(let response):
-        //        print(response)
+        print(response)
         let parkingLotManager = ParkingLotManager()
         self.datas = parkingLotManager.getAll()
         self.tableView.reloadData()

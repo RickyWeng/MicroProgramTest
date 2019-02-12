@@ -9,6 +9,7 @@
 import Foundation
 
 // 停車場 API Response
+// swiftlint:disable all
 struct GetParkingLotResponse: Codable {
   let success: Bool
   let result: GetParkingLotResult

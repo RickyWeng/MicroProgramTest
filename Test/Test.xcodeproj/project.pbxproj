@@ -29,6 +29,7 @@
 		DF2622342212AA97003E570F /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2622322212AA97003E570F /* BaseTableViewCell.swift */; };
 		DF2622352212AA97003E570F /* BaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF2622332212AA97003E570F /* BaseTableViewCell.xib */; };
 		DF2622372212ABF6003E570F /* TableCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2622362212ABF6003E570F /* TableCellConfigurator.swift */; };
+		DF2622392212B171003E570F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF2622382212B171003E570F /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		DF2622322212AA97003E570F /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		DF2622332212AA97003E570F /* BaseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseTableViewCell.xib; sourceTree = "<group>"; };
 		DF2622362212ABF6003E570F /* TableCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellConfigurator.swift; sourceTree = "<group>"; };
+		DF2622382212B171003E570F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF2622392212B171003E570F /* MapKit.framework in Frameworks */,
 				589BA37DF7CADBA039BA3E84 /* Pods_Test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,6 +100,7 @@
 		42501D8E95B680B30979808C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DF2622382212B171003E570F /* MapKit.framework */,
 				B208AAFED54275CB56494665 /* Pods_Test.framework */,
 				6FEB49AA3735486D1A3E383E /* Pods_TestTests.framework */,
 			);
@@ -287,6 +291,11 @@
 				TargetAttributes = {
 					DF2621E62211B300003E570F = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					DF2621FD2211B301003E570F = {
 						CreatedOnToolsVersion = 10.1;

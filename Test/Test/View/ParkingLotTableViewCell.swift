@@ -10,7 +10,6 @@ import UIKit
 
 class ParkingLotTableViewCell: UITableViewCell {
   @IBOutlet var labels: [UILabel]!
-
   var data: ParkingLot? {
     didSet {
       guard let data = data else { return }
