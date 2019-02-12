@@ -41,17 +41,10 @@ struct ParkingLotManager {
     return CoreDataResult.success
   }
 
-  // 透過 停車場名稱 查詢 ParkingLot Enitity
-  func get(name: String) -> [ParkingLot] {
+  // 透過 關鍵字 查詢 ParkingLot Enitity
+  func get(key: String) -> [ParkingLot] {
     let request: NSFetchRequest<ParkingLot> = ParkingLot.fetchRequest()
-    request.predicate = NSPredicate(format: "name == %@", name)
-    request.sortDescriptors = [NSSortDescriptor(key: "id", ascending: true)]
-    return CoreDataManager.shared.fetch(request: request)
-  }
-
-  // 透過 地區名稱 查詢 ParkingLot Enitity
-  func get(area: String) -> [ParkingLot] {
-    let request: NSFetchRequest<ParkingLot> = ParkingLot.fetchRequest()
+    request.predicate = NSPredicate(format: "name contains[c] %@  OR  area contains[c] %@", key, key)
     request.sortDescriptors = [NSSortDescriptor(key: "id", ascending: true)]
     return CoreDataManager.shared.fetch(request: request)
   }

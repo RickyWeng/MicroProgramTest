@@ -38,7 +38,7 @@
                                 <rect key="frame" x="0.0" y="120" width="375" height="547"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="26d-v8-09Y">
+                            <searchBar contentMode="redraw" placeholder="Seach here..." translatesAutoresizingMaskIntoConstraints="NO" id="26d-v8-09Y">
                                 <rect key="frame" x="0.0" y="64" width="375" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="626-BW-mlj"/>

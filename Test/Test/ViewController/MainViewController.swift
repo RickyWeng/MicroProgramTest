@@ -13,12 +13,14 @@ class MainViewController: UIViewController {
   @IBOutlet weak var searchBar: UISearchBar!
   @IBOutlet weak var tableView: UITableView!
   var datas: [ParkingLot] = []
+  let parkingLotManager = ParkingLotManager()
 
   override func viewDidLoad() {
     super.viewDidLoad()
     title = "停車場"
     setupTableView()
     getParkingLot()
+    searchBar.delegate = self
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -74,5 +76,20 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     performSegue(withIdentifier: "DisplayDetailViewController", sender: datas[indexPath.row])
+  }
+}
+
+extension MainViewController: UISearchBarDelegate {
+  func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    view.endEditing(true)
+    SVProgressHUD.show()
+    if let text = searchBar.text, text != "" {
+      datas = parkingLotManager.get(key: text)
+    } else {
+      datas = parkingLotManager.getAll()
+    }
+
+    tableView.reloadData()
+    SVProgressHUD.dismiss(withDelay: 0.3)
   }
 }
