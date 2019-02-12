@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class MainViewController: UIViewController {
   @IBOutlet weak var searchBar: UISearchBar!
@@ -36,12 +37,13 @@ class MainViewController: UIViewController {
   }
 
   private func getParkingLot() {
+    SVProgressHUD.show()
     NetworkRequest.getParkingLot { (result) in
+      SVProgressHUD.dismiss()
       switch result {
       case .success(let response):
         print(response)
-        let parkingLotManager = ParkingLotManager()
-        self.datas = parkingLotManager.getAll()
+        self.datas = self.parkingLotManager.getAll()
         self.tableView.reloadData()
       case .error(let errorMessage):
         print(errorMessage)
