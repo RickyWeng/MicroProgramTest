@@ -14,6 +14,13 @@ class MainViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
   var datas: [ParkingLot] = []
   let parkingLotManager = ParkingLotManager()
+  lazy var refreshControl: UIRefreshControl = {
+    let refreshControl = UIRefreshControl()
+    refreshControl.backgroundColor = UIColor.clear
+    refreshControl.tintColor = UIColor.clear
+    refreshControl.addTarget(self, action: #selector(getParkingLot), for: .valueChanged)
+    return refreshControl
+  }()
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -38,10 +45,11 @@ class MainViewController: UIViewController {
     }
   }
 
-  private func getParkingLot() {
+  @objc private func getParkingLot() {
     SVProgressHUD.show()
     NetworkRequest.getParkingLot { (result) in
       SVProgressHUD.dismiss()
+      self.refreshControl.endRefreshing()
       switch result {
       case .success(let response):
         print(response)
@@ -59,6 +67,8 @@ class MainViewController: UIViewController {
     tableView.register(nib, forCellReuseIdentifier: "cell")
     tableView.delegate = self
     tableView.dataSource = self
+    // 增加刷新元件
+    tableView.addSubview(refreshControl)
   }
 }
 
@@ -83,6 +93,7 @@ extension MainViewController: UISearchBarDelegate {
   func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
     view.endEditing(true)
     SVProgressHUD.show()
+    // 從 CoreData 讀取資料
     if let text = searchBar.text, text != "" {
       datas = parkingLotManager.get(key: text)
     } else {
