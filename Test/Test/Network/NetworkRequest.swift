@@ -20,7 +20,7 @@ class NetworkRequest {
     guard let url = url else { return }
     var request = URLRequest(url: url)
     request.httpMethod = "GET"
-    URLSession.shared.dataTask(with: request) { (data, response, error) in
+    URLSession.shared.dataTask(with: request) { (data, _, error) in
       guard let data = data, error == nil else {
         DispatchQueue.main.async {
           completion?(.error(error.debugDescription))

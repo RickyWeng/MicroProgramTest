@@ -43,7 +43,7 @@ struct GetParkingLotRecord: Codable {
   let address, tel, payex, serviceTime: String
   let tw97X, tw97Y, totalCar, totalMotor: String
   let totalBike: String
-  
+
   enum CodingKeys: String, CodingKey {
     case id = "ID"
     case area = "AREA"
